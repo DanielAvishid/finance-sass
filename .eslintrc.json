@@ -1,3 +1,115 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    // enable typescript support
+    "plugin:@typescript-eslint/recommended",
+    // now disable all of the rules that are in conflict with prettier
+    "prettier",
+    // note that we don't add the prettier rules, they add noise to the IDE
+    // and the code is all being formatted on commit anyway.
+    /*
+     * Disallow regex lookbehinds. Whole app crashes in unsupported browsers
+     */
+    "plugin:no-lookahead-lookbehind-regexp/recommended",
+    "next/core-web-vitals"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "unicorn"
+  ],
+  "rules": {
+    "Expression produces a union type that is too complex to represent.": "off",
+    "unicorn/no-abusive-eslint-disable": "error",
+    "unicorn/no-unsafe-regex": "error",
+    "unicorn/prefer-array-flat-map": "warn",
+    "unicorn/prefer-array-some": "warn",
+    "unicorn/prefer-includes": "warn",
+    "arrow-body-style": "off",
+    "dot-notation": "warn",
+    "no-var": "error",
+    "no-debugger": "error",
+    "no-alert": "error",
+    "no-console": "warn",
+    "no-duplicate-imports": "error",
+    "object-shorthand": "warn",
+    "prefer-arrow-callback": "warn",
+    "prefer-const": "warn",
+    "@typescript-eslint/class-name-casing": "off",
+    "@typescript-eslint/camelcase": "off",
+    "no-unused-vars": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/__generated__/*.ts"
+      ],
+      "rules": {
+        "no-duplicate-imports": "off"
+      }
+    },
+    {
+      "files": "*.{js,jsx}",
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+      }
+    },
+    {
+      "files": "*.{ts,tsx}",
+      "rules": {
+        "react/boolean-prop-naming": "error",
+        "react/jsx-key": "warn",
+        "react/jsx-no-useless-fragment": "off",
+        "jsx-quotes": [
+          "error",
+          "prefer-double"
+        ],
+        "react/jsx-curly-brace-presence": [
+          "error",
+          {
+            "props": "never",
+            "children": "never",
+            "propElementValues": "always"
+          }
+        ],
+        "jsx-a11y/img-redundant-alt": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/prefer-interface": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-namespace": "warn",
+        "@typescript-eslint/no-empty-interface": [
+          "error",
+          {
+            "allowSingleExtends": true
+          }
+        ],
+        "@typescript-eslint/no-angle-bracket-type-assertion": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "react/forbid-dom-props": "off",
+        "react/forbid-component-props": [
+          "warn",
+          {
+            "forbid": [
+              "css",
+              "style",
+              {
+                "propName": "__css",
+                "message": "Don't style components with pure css use Tailwind."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

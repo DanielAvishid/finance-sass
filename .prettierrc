@@ -1,0 +1,9 @@
+{
+  "bracketSpacing": false,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "printWidth": 100,
+  "importOrder": ["^next(.*)$", "^react(.*)$", "^lodash(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderCaseInsensitive": true
+}
