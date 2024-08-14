@@ -1,6 +1,6 @@
 import {db} from "@/db/drizzle";
 import {accounts, categories, transactions} from "@/db/schema";
-import {calculatePercentageChange, fillMissingDays} from "@/lib/utils";
+import {calculatePercentageChange, convertAmountFromMiliunits, fillMissingDays} from "@/lib/utils";
 import {clerkMiddleware, getAuth} from "@hono/clerk-auth";
 import {zValidator} from "@hono/zod-validator";
 import {subDays, parse, differenceInDays} from "date-fns";
