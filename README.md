@@ -117,12 +117,26 @@ Open your browser at http://localhost:3000
 
 API routes are built with [Hono.js](https://hono.dev), mounted inside the Next.js App Router.
 
-| Method | Route                        | Description                                              |
-|--------|------------------------------|----------------------------------------------------------|
-| GET    | `/api/accounts`              | Get all accounts for the authenticated user              |
-| GET    | `/api/accounts/:id`          | Get a specific account by ID                             |
-| POST   | `/api/accounts`              | Create a new account                                     |
-| POST   | `/api/accounts/bulk-delete`  | Delete multiple accounts by IDs                          |
-| PATCH  | `/api/accounts/:id`          | Update an existing account                               |
-| DELETE | `/api/accounts/:id`          | Delete an account                                        |
+| Method | Route                          | Description                                              |
+|--------|--------------------------------|----------------------------------------------------------|
+| GET    | `/api/accounts`                | Get all accounts for the authenticated user              |
+| GET    | `/api/accounts/:id`            | Get a specific account by ID                             |
+| POST   | `/api/accounts`                | Create a new account                                     |
+| POST   | `/api/accounts/bulk-delete`    | Delete multiple accounts by IDs                          |
+| PATCH  | `/api/accounts/:id`            | Update an existing account                               |
+| DELETE | `/api/accounts/:id`            | Delete an account                                        |
+| GET    | `/api/categories`              | Get all categories                                       |
+| GET    | `/api/categories/:id`          | Get a specific category by ID                            |
+| POST   | `/api/categories`              | Create a new category                                    |
+| POST   | `/api/categories/bulk-delete`  | Delete multiple categories by IDs                        |
+| PATCH  | `/api/categories/:id`          | Update an existing category                              |
+| DELETE | `/api/categories/:id`          | Delete an category                                       |
+| GET    | `/api/transactions`            | Get all transactions                                     |
+| GET    | `/api/transactions/:id`        | Get a specific transaction by ID                         |
+| POST   | `/api/transactions`            | Create a new transaction                                 |
+| POST   | `/api/transactions/bulk-delete`| Delete multiple transactions by IDs                      |
+| POST   | `/api/transactions/bulk-create`| Create multiple transactions by IDs                      |
+| PATCH  | `/api/transactions/:id`        | Update an existing transcation                           |
+| DELETE | `/api/transactions/:id`        | Delete an transaction                                    |
+| GET    | `/api/summary`                 | Get summary                                              |
 
