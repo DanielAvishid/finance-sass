@@ -122,5 +122,4 @@ API routes are built with [Hono.js](https://hono.dev), mounted inside the Next.j
 | POST   | `/api/accounts/bulk-delete`  | Delete multiple accounts by IDs                          |
 | PATCH  | `/api/accounts/:id`          | Update an existing account                               |
 | DELETE | `/api/accounts/:id`          | Delete an account                                        |
-| POST   | `/api/webhooks/clerk`        | Handle Clerk webhooks for user lifecycle events          |
 
