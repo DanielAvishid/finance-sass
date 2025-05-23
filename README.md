@@ -11,6 +11,7 @@ Whether you're managing personal expenses or business ledgers, Finance SaaS prov
 - 🔐 **Secure User Authentication** – Powered by Clerk for seamless and secure sign-up/sign-in flows.
 - 🏦 **Account Management** – Create, view, update, and delete multiple financial accounts (e.g., Checking, Savings).
 - 📂 **Category Organization** – Define custom categories (e.g., Food, Rent, Salary) to classify your income and expenses.
+- 📥 **CSV Import** – Upload CSV files to automatically import transactions into your account.
 - 💸 **Transaction Tracking** – Log detailed transactions and associate them with accounts and categories.
 - ⚡ **Robust API Endpoints** – Built with Hono.js for fast and efficient data interactions.
 - 🧠 **Modern ORM & DB** – Drizzle ORM with Neon PostgreSQL ensures power and scalability.
