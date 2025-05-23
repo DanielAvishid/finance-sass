@@ -4,6 +4,8 @@ Finance SaaS is a modern, comprehensive financial management platform designed t
 
 Whether you're managing personal expenses or business ledgers, Finance SaaS provides intuitive tools for efficient financial organization and insights.
 
+![Screenshot](./public/demo.JPG)
+
 ---
 
 ## ✨ Features
